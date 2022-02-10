@@ -1,0 +1,27 @@
+{
+  "name": "address-gating",
+  "version": "1.0.0",
+  "description": "This is the repo for SeeDao address-gating project. For detail, please check the official Github repo: https://github.com/seedao/address-gating.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seedao/address-gating.git"
+  },
+  "author": "Cleopatra@SeeDao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seedao/address-gating/issues"
+  },
+  "homepage": "https://github.com/seedao/address-gating#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "querystring": "^0.2.1",
+    "url": "^0.11.0"
+  }
+}
