@@ -30,7 +30,6 @@ let ownerMap = new Map();
 
 app.get('/validate', (req, res) => {
 
-    console.log("yesh")
     let addr = req.query.addr;
     console.log("Addr", addr)
     // missing parameters
@@ -44,7 +43,6 @@ app.get('/validate', (req, res) => {
     } else {
         res.json({ isOwner: false });
     }
-    console.log("Done")
 })
 
 app.get('/ping', (req, res) => {
