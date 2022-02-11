@@ -29,14 +29,14 @@ let owners = require('./data/owner').result;
 let ownerMap = new Map();
 
 app.get('/validate', (req, res) => {
-
     let addr = req.query.addr;
-    console.log("Addr", addr)
     // missing parameters
     if(!addr) {
         res.status(422);
         res.send('None shall pass');
     }
+    // switch to lower case
+    addr = addr.toLowerCase()
     res.status(200);
     if(ownerMap.has(addr)) {
         res.json({ isOwner: true });
@@ -46,7 +46,6 @@ app.get('/validate', (req, res) => {
 })
 
 app.get('/ping', (req, res) => {
-
     console.log("ping")
     res.send("PING")
 })
