@@ -89,10 +89,9 @@ function cronFetchOwner() {
   owners = require("./data/owner").result;
   updateOwnerMap();
 
-  // fetch from the Moralis API periodically
-  // 10 mins per call
+  // fetch from the Moralis API periodically (3 mins per call)
   var fetchingJob = new cronJob(
-    "*/10 * * * *", 
+    "*/3 * * * *", 
     async () => {
     const ret = await fetchFromMoralis();
       if(ret[1]) {
